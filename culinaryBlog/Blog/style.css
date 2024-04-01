@@ -1,0 +1,517 @@
+.lw, dt img, dd img, p img, li img, h1 img, h2 img, h3 img, h4 img, dt img, td img, button img {
+	max-height: .8em;
+	max-width: 1em;
+	vertical-align: middle ;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	text-align: center ;
+}
+
+header {
+	text-align: center ;
+	font-family: "Fira Sans",sans ;
+	padding-bottom: 15pt ;
+}
+header h1 {
+	font-size: 30pt ;
+	margin-bottom: 0 ;
+}
+header h2 {
+	margin-top: 0 ;
+	font-style: italic ;
+	padding: .5em ;
+}
+
+h1 { color: chocolate ; }
+h2 { color: sandybrown ; }
+h3 { color: tan ; }
+h4 { color: wheat ; }
+h5, h6 { color: cornsilk ; }
+
+strong {
+	color: wheat ;
+}
+
+a {
+	color: #33bbff ;
+	text-decoration: none ;
+}
+
+@media ( pointer: coarse ) {
+li {
+	padding-bottom: .5em ;
+}
+}
+
+dt {
+	font-weight: bold ;
+}
+body {
+	background: #1b1b1b ;
+	color: #fff ;
+	margin-bottom: 200px ;
+	font-family: "Garamond", Georgia, serif, 'Noto Color Emoji', 'Apple Color Emoji', 'Segoe UI Emoji';
+}
+
+aside {
+	font-style: italic;
+	font-size: small ;
+	color: #ddd ;
+}
+
+main {
+	max-width: 800px ;
+	margin: auto ;
+}
+
+main > article {
+	margin-bottom: 0 ;
+	margin: auto ;
+}
+
+.taglist {
+	max-width: 400px ;
+	margin: auto ;
+	text-align: center ;
+	margin-bottom: 1em ;
+}
+
+.menuname {
+	display: none ;
+}
+
+.buttonlist {
+	display: none ;
+	position: absolute ;
+	bottom: 1em ;
+}
+
+footer {
+	max-width: 600px ;
+	margin-left: auto ;
+	margin-right: auto ;
+	text-align: center ;
+	clear: both ;
+}
+
+#tag_crypto:before { content: '💰' ; }
+#tag_economics:before { content: "📈" ; }
+#tag_lifestyle:before { content: "👨‍👩‍👦" ; }
+#tag_language:before { content: "🗣️" ; }
+#tag_linux:before { content: "🐃" ; }
+#tag_personal:before { content: "😎" ; }
+#tag_philosophy:before { content: "🎓" ; }
+#tag_religion:before { content:"☦️" ; }
+#tag_science:before { content:"🥼" ; }
+#tag_software:before { content: "🖥️" ; }
+#tag_technology:before { content: "⚙️" ; }
+#tag_tutorial:before { content: "📖" ; }
+#tag_tradition:before { content: "📜" ; }
+#tag_updates:before { content: "🆕" ; }
+#tag_politics:before { content: "👑" ; }
+#tag_history:before { content: "⏳" ; }
+
+
+.menuactive li {
+	background: #111 ;
+}
+
+@media (min-width: 1200px) {
+	.buttonlist {
+		display: block ;
+	}
+
+	.buttonlist img {
+		max-height: inherit ;
+		max-width: inherit ;
+		vertical-align: middle ;
+	}
+
+
+	.resright, .profile{
+		display: block ;
+		float: right;
+		clear: both ;
+		padding: 10px ;
+		max-width: 300px ;
+	}
+	.menuname {
+		display: inline-block ;
+	}
+
+}
+
+#tagcloud {
+	clear: both ;
+	padding: 0;
+	border-radius: 10px ;
+	text-align: center ;
+	margin: 0 auto ;
+	border: solid 1px ;
+	border-style: dashed ;
+	list-style: none ;
+}
+
+#tagcloud li {
+	display: inline-block ;
+}
+
+#tagcloud a {
+	display: block ;
+	width: auto ;
+	border-radius: 10px ;
+	padding: .25em ;
+	margin: 2px ;
+}
+
+#tagcloud a:hover {
+	box-shadow: 2px 2px 2px 2px black  ;
+}
+
+.titleimg {
+	align: center ;
+}
+
+.titleimg img {
+	margin: auto ;
+	max-width: 90% ;
+	max-height: 400px ;
+	display: block ;
+}
+
+code {
+	color: #0d0 ;
+	overflow-wrap: break-word ;
+}
+
+.crypto {
+	font-size: x-small ;
+}
+
+.resright {
+    margin: auto ;
+    display: block ;
+    text-align: center ;
+    max-width: 100% ;
+}
+
+.resright img {
+	max-height: 300px ;
+}
+
+.profile {
+	text-align: center ;
+	max-height: 250px ;
+}
+.profile img {
+	max-height: inherit ;
+	border-radius: 50px ;
+	max-width: 100% ;
+}
+
+figcaption {
+	text-align: center ;
+	display: block ;
+	font-style: italic ;
+}
+
+math {
+	display: block ;
+	text-align: center ;
+}
+
+sup {
+	vertical-align: top;
+	font-size: 0.6em;
+}
+
+.qr { max-width: 150px ; padding: 10px }
+
+li .summary {
+	display: none;
+}
+
+li:hover .summary {
+	display: block ;
+	font-style: italic ;
+}
+
+input, textarea {
+	background: #222 ;
+	color: white ;
+	margin: auto ;
+	border-color: #333 ;
+	font-size: large ;
+}
+
+
+#name {
+	max-width: 25em ;
+}
+#amount {
+	max-width: 25em ;
+}
+#message {
+	width: 100% ;
+}
+
+form {
+	margin: auto ;
+	width: 30em ;
+}
+
+pre {
+	border-radius: 20px ;
+	padding: 1em ;
+}
+
+.loc {
+	color: #777 ;
+	display: none ;
+}
+
+.mainmenucont {
+	position: relative ;
+	text-align: center ;
+	height: 100px ;
+	width: 100px ;
+	display: inline-block ;
+
+}
+
+.menulink {
+	text-decoration: none ;
+}
+
+.mainmenucont:hover {
+	background: darkmagenta ;
+	border-radius: 20px ;
+}
+
+.mainmenuimg {
+	height: 100px ;
+	width: 100px ;
+}
+
+.mainmenutext {
+	position: absolute ;
+	top: 50% ;
+	left: 50% ;
+	transform: translate(-50%, -50%) ;
+	font-size: 24px ;
+	color: white ;
+	text-shadow: 0px 0px 3px black ;
+}
+
+.mainmenucont:hover .mainmenutext {
+	color: var(--lime) ;
+}
+
+.backforth {
+	animation: bf .5s linear both infinite alternate ;
+	position: absolute ;
+}
+
+@keyframes bf{
+	from{transform: translateX(.25em);}
+	to{transform: translateX(0em);}
+}
+
+time {
+	font-family: monospace ;
+	color: #888 ;
+	font-size: 10pt ;
+}
+
+.soy {
+	animation: shake 2s ease-out;
+	animation-iteration-count: infinite;
+	text-align: center ;
+}
+
+@keyframes shake {
+	0% { transform: translate(1px, 1px) rotate(0deg); }
+	10% { transform: translate(-1px, -2px) rotate(-1deg); }
+	20% { transform: translate(-3px, 0px) rotate(1deg); }
+	30% { transform: translate(3px, 2px) rotate(0deg); }
+	40% { transform: translate(1px, -1px) rotate(1deg); }
+	50% { transform: translate(-1px, 2px) rotate(-1deg); }
+	60% { transform: translate(-3px, 1px) rotate(0deg); }
+	70% { transform: translate(3px, 1px) rotate(-1deg); }
+	80% { transform: translate(-1px, -1px) rotate(1deg); }
+	90% { transform: translate(1px, 2px) rotate(0deg); }
+	100% { transform: translate(1px, -2px) rotate(-1deg); }
+	}
+
+input, textarea {
+	background: black ;
+}
+
+.type_updates a, .type_updates {
+	color: #000303 ;
+}
+
+
+/* For NEXTPREV.HTML */
+#prevart {
+	float: left ;
+	text-align: left ;
+}
+#nextart {
+	float: right ;
+	text-align: right ;
+}
+#nextart,#prevart {
+	max-width: 33% ;
+}
+
+blockquote {
+	font-style: italic ;
+	font-size: large ;
+}
+
+
+
+
+#buttondiv {
+	text-align: center ;
+}
+
+#buttonlist {
+	padding-left: 0 ;
+}
+
+#buttonlist li {
+	display: inline-block ;
+	height: 150px ;
+	width: 150px ;
+	position: relative ;
+	margin: auto ;
+}
+
+#buttonlist img {
+	height: 80% ;
+	width: 80% ;
+	max-height: none ;
+	max-width: none ;
+	position: absolute ;
+	left: 50% ;
+	transform: translateX(-50%);
+}
+
+#buttonlist .title, #buttonlist li:hover .desc {
+	display: block ;
+	position: absolute ;
+	color: white ;
+	width: 100% ;
+	text-align: center ;
+	top: 50%;
+  	transform: translateY(-50%);
+	border-radius: 1em ;
+	font-size: large ;
+
+}
+
+#buttonlist .title {
+	font-size: xx-large ;
+	background-color: rgba(3,3,3,0.6) ;
+}
+#buttonlist li:hover .desc {
+	background-color: rgba(3,3,3,0.9) ;
+}
+
+#buttonlist li:hover .title, .desc, .tags {
+	display: none ;
+}
+
+.vidcont {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	padding-top: 56.25%;
+}
+
+.embeddedvid {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.cryplist {
+	text-align: left ;
+}
+
+.cryplist li {
+	display: inline-block ;
+	white-space: nowrap ;
+}
+
+
+
+
+
+#linklist {
+	text-align: center ;
+}
+
+
+#linklist {
+	padding-left: 0 ;
+}
+
+#linklist li {
+	display: inline-block ;
+	height: 150px ;
+	width: 150px ;
+	position: relative ;
+}
+
+#linklist li a {
+	height: 100% ;
+	width: 100% ;
+	display: block ;
+}
+
+#linklist img {
+	height: 80% ;
+	width: 80% ;
+	max-height: none ;
+	max-width: none ;
+	position: absolute ;
+	left: 50% ;
+	transform: translateX(-50%);
+}
+
+#linklist .title, #linklist li:hover .desc {
+	display: block ;
+	position: absolute ;
+	color: white ;
+	width: 100% ;
+	text-align: center ;
+	top: 50%;
+  	transform: translateY(-50%);
+	border-radius: 1em ;
+	font-size: large ;
+}
+
+#linklist .title {
+	font-size: xx-large ;
+	background-color: rgba(3,3,3,0.6) ;
+}
+
+#linklist li:hover .desc {
+	background-color: rgba(3,3,3,0.9) ;
+}
+
+#linklist li:hover .title, .desc, .tags {
+	display: none ;
+}
+
+.menuurl {
+	color: green ;
+}

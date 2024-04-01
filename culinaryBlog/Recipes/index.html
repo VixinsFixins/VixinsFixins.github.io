@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="generator" content="Hugo 0.80.0" />
+	<title>Recipe Library</title>
+	<link rel="canonical" href="https://daracooks.xyz">
+	<link rel='stylesheet' type='text/css' href='style.css'>
+	<link rel="icon" href="/favicon.svg">
+	<meta name="description" content="A fast, cooking only website with no ads.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta charset="utf-8">
+</head>
+<body>
+<main>
+<header><h1 id="tag_🍲 Based Cooking 🍳">
+🍲 Vixen's Fixins 🍳
+</h1></header>
+<nav>
+    <a href="../../Index.html"> <!-- Added anchor tag here -->
+        <h1 id="🏠 home-button">🏠Home</h1>
+    </a> <!-- Closed anchor tag here -->
+</nav>
+<article>
+
+<h2 id="what-do-you-want-to-cook">What do you want to cook?</h2>
+<div class="search js-only">
+  <input type="text" id="search" placeholder="Search ALL Recipes...">
+  <button id="clear-search">
+    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Backspace</title><path d="M135.19 390.14a28.79 28.79 0 0021.68 9.86h246.26A29 29 0 00432 371.13V140.87A29 29 0 00403.13 112H156.87a28.84 28.84 0 00-21.67 9.84v0L46.33 256l88.86 134.11z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"></path><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M336.67 192.33L206.66 322.34M336.67 322.34L206.66 192.33M336.67 192.33L206.66 322.34M336.67 322.34L206.66 192.33"></path></svg>
+  </button>
+</div>
+<script>
+// @license magnet:?xt=urn:btih:5ac446d35272cc2e4e85e4325b146d0b7ca8f50c&dn=unlicense.txt Unlicense
+
+document.addEventListener("DOMContentLoaded", () => {
+  for (e of document.getElementsByClassName("js-only")) {
+    e.classList.remove("js-only");
+  }
+
+  const recipes = document.querySelectorAll("#artlist li");
+  const search = document.getElementById("search");
+  const oldheading = document.getElementById("newest-recipes");
+  const clearSearch = document.getElementById("clear-search");
+  const artlist = document.getElementById("artlist");
+
+  search.addEventListener("input", () => {
+    // grab search input value
+    const searchText = search.value.toLowerCase().trim().normalize('NFD').replace(/\p{Diacritic}/gu, "");
+    const searchTerms = searchText.split(" ");
+    const hasFilter = searchText.length > 0;
+
+    artlist.classList.toggle("list-searched", hasFilter);
+    oldheading.classList.toggle("hidden", hasFilter);
+
+    // for each recipe hide all but matched
+    recipes.forEach(recipe => {
+      const searchString = `${recipe.textContent} ${recipe.dataset.tags}`.toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, "");
+      const isMatch = searchTerms.every(term => searchString.includes(term));
+
+      recipe.hidden = !isMatch;
+      recipe.classList.toggle("matched-recipe", hasFilter && isMatch);
+    })
+  })
+
+  clearSearch.addEventListener("click", () => {
+    search.value = "";
+    recipes.forEach(recipe => {
+      recipe.hidden = false;
+      recipe.classList.remove("matched-recipe");
+    })
+
+    artlist.classList.remove("list-searched");
+    oldheading.classList.remove("hidden");
+  })
+})
+// @license-end
+</script>
+<h2 id="newest-recipes">Newest Recipes</h2>
+<ul id=artlist>
+<li data-tags="[beef cream swiss quick]" ><a href="https://based.cooking/zurich-sytle-meat-saute/">Zurich-Style Meat Saute</a></li>
+<li data-tags="[basic sauce french italian]" class="older-article"><a href="https://based.cooking/classic-bechamel-sauce/">Classic béchamel sauce</a></li>
+<li data-tags="[breakfast french]" class="older-article"><a href="https://based.cooking/french-toast/">French Toast</a></li>
+<li data-tags="[dessert cookies snack greek easter]" class="older-article"><a href="https://based.cooking/greek-easter-cookies/">Greek Easter Cookies</a></li>
+<li data-tags="[lamb mutton indian]" class="older-article"><a href="https://based.cooking/lamb-biriyani/">Lamb Biriyani</a></li>
+<li data-tags="[italian pasta]" class="older-article"><a href="https://based.cooking/lasagna/">Lasagna</a></li>
+<li data-tags="[rice southwest]" class="older-article"><a href="https://based.cooking/loaded-mexican-rice/">Loaded Mexican Rice</a></li>
+<li data-tags="[italian mushrooms wine rice]" class="older-article"><a href="https://based.cooking/mushroom-risotto/">Mushroom risotto</a></li>
+<li data-tags="[chicken spicy]" class="older-article"><a href="https://based.cooking/nashville-chicken/">Nashville Chicken Sandwich</a></li>
+<li data-tags="[bread dough]" class="older-article"><a href="https://based.cooking/no-knead-bread/">No-knead Bread</a></li>
+<li data-tags="[basic pizza dough]" class="older-article"><a href="https://based.cooking/no-knead-pizza-dough/">No-knead pizza dough</a></li>
+<li data-tags="[quick sauce indian]" class="older-article"><a href="https://based.cooking/onion-raitha/">Onion Raitha (Indian Tzatziki)</a></li>
+<li data-tags="[basic pizza]" class="older-article"><a href="https://based.cooking/pan-pizza/">Pan pizza</a></li>
+<li data-tags="[basic pizza sauce]" class="older-article"><a href="https://based.cooking/pizza-sauce/">Pizza sauce</a></li>
+<li data-tags="[american side fruit]" class="older-article"><a href="https://based.cooking/savory-squash/">Savory Squash</a></li>
+<li data-tags="[chicken curry stew]" class="older-article"><a href="https://based.cooking/simple-chicken-curry/">Simple Chicken Curry</a></li>
+<li data-tags="[pork slowcooked mexican]" class="older-article"><a href="https://based.cooking/pork-carnitas/">Slow-cooked Pork Carnitas</a></li>
+<li data-tags="[spanish]" class="older-article"><a href="https://based.cooking/lentejas/">Sopa de Lentejas</a></li>
+<li data-tags="[bread sourdough]" class="older-article"><a href="https://based.cooking/sourdough-loaf/">Sourdough Table Loaf</a></li>
+<li data-tags="[italian pasta]" class="older-article"><a href="https://based.cooking/aglio-e-olio/">Spaghetti aglio e olio</a></li>
+<li data-tags="[italian pasta]" class="older-article"><a href="https://based.cooking/spaghetti-alla-puttanesca/">Spaghetti alla puttanesca</a></li>
+<li data-tags="[spanish potato eggs tortilla]" class="older-article"><a href="https://based.cooking/spanish-tortilla/">Spanish Tortilla</a></li>
+<li data-tags="[breakfast swedish pancake]" class="older-article"><a href="https://based.cooking/swedish-pancakes/">Swedish Pancakes</a></li>
+<li data-tags="[mexican pork]" class="older-article"><a href="https://based.cooking/chicharrones/">Chicharrones</a></li>
+<li data-tags="[drink sweet breakfast]" class="older-article"><a href="https://based.cooking/bloody-mary-mix/">Bloody Mary Mix</a></li>
+<li data-tags="[mexican beef basic]" class="older-article"><a href="https://based.cooking/chimichanga/">Chimichanga</a></li>
+<li data-tags="[italian pasta quick]" class="older-article"><a href="https://based.cooking/cinque-pi/">Cinque Pi</a></li>
+<li data-tags="[drink quick swiss german french]" class="older-article"><a href="https://based.cooking/gluehwein/">Glühwein - mulled wine</a></li>
+<li data-tags="[american quick beef basic]" class="older-article"><a href="https://based.cooking/hamburger-patties-all-beef/">Hamburger Patties</a></li>
+<li data-tags="[drink sweet breakfast]" class="older-article"><a href="https://based.cooking/irish-coffee/">Irish Coffee</a></li>
+</ul>
+
+<h2 id="or-browse-by-category">Or Browse by Category&hellip;</h2>
+   <ul id="tagcloud">
+    <li><a href="https://based.cooking/tags/alcohol" id="tag_alcohol">Alcohol</a></li>
+    <li><a href="https://based.cooking/tags/american" id="tag_american">American</a></li>
+    <li><a href="https://based.cooking/tags/apple" id="tag_apple">Apple</a></li>
+    <li><a href="https://based.cooking/tags/basic" id="tag_basic">Basic</a></li>
+    <li><a href="https://based.cooking/tags/beans" id="tag_beans">Beans</a></li>
+    <li><a href="https://based.cooking/tags/beef" id="tag_beef">Beef</a></li>
+    <li><a href="https://based.cooking/tags/breakfast" id="tag_breakfast">Breakfast</a></li>
+    <li><a href="https://based.cooking/tags/cheese" id="tag_cheese">Cheese</a></li>
+    <li><a href="https://based.cooking/tags/chicken" id="tag_chicken">Chicken</a></li>
+    <li><a href="https://based.cooking/tags/curry" id="tag_curry">Curry</a></li>
+    <li><a href="https://based.cooking/tags/eggs" id="tag_eggs">Eggs</a></li>
+    <li><a href="https://based.cooking/tags/fish" id="tag_fish">Fish</a></li>
+    <li><a href="https://based.cooking/tags/fruit" id="tag_fruit">Fruit</a></li>
+    <li><a href="https://based.cooking/tags/indian" id="tag_indian">Indian</a></li>
+    <li><a href="https://based.cooking/tags/italian" id="tag_italian">Italian</a></li>
+    <li><a href="https://based.cooking/tags/lunch" id="tag_lunch">Lunch</a></li>
+    <li><a href="https://based.cooking/tags/meat" id="tag_meat">Meat</a></li>
+    <li><a href="https://based.cooking/tags/mexican" id="tag_mexican">Mexican</a></li>
+    <li><a href="https://based.cooking/tags/pork" id="tag_pork">Pork</a></li>
+    <li><a href="https://based.cooking/tags/potato" id="tag_potato">Potato</a></li>
+    <li><a href="https://based.cooking/tags/quick" id="tag_quick">Quick</a></li>
+    <li><a href="https://based.cooking/tags/sauce" id="tag_sauce">Sauce</a></li>
+    <li><a href="https://based.cooking/tags/seafood" id="tag_seafood">Seafood</a></li>
+    <li><a href="https://based.cooking/tags/side" id="tag_side">Side</a></li>
+    <li><a href="https://based.cooking/tags/soup" id="tag_soup">Soup</a></li>
+    <li><a href="https://based.cooking/tags/spanish" id="tag_spanish">Spanish</a></li>
+    <li><a href="https://based.cooking/tags/spicy" id="tag_spicy">Spicy</a></li>
+    <li><a href="https://based.cooking/tags/stew" id="tag_stew">Stew</a></li>
+    <li><a href="https://based.cooking/tags/vietnamese" id="tag_vietnamese">Vietnamese</a></li>
+    </ul>
+
+<h2 id="about-this-site">About this site</h2>
+<p>Founded to provide a simple online cookbook without ads and obese web design.
+See the story of this site unfold in three videos:</p>
+<!--
+<h2 id="its-easy-to-contribute">It&rsquo;s easy to contribute!</h2>
+<p>New recipes can be submitted <a href="https://github.com/lukesmithxyz/based.cooking">on Github</a>
+We are funded by you only, not 20MB of ads or privacy-violating trackers per page.</p>
+<div class=cryptocontainer>
+<div class=cryptoinfo>
+<div class=cryptotext>
+<img alt="" style="max-height:1em;max-width:1em;display:inline" src=/pix/xmr.svg> Monero <br>
+<code style="font-size:xx-small;overflow-wrap:break-word;">84N9N3DMWhQ9cstHwGEjo8hEvm9bjeYgjV5fLrGK6TmA9iVPjnU7NMUT7gyAc22UgGAVTCUgReQ1J67znhWP3L52Usfw6jg</code><br>
+</div>
+<a href=/pix/monero-based-cooking.png><img alt="Monero QR Code" class=qr src=/pix/monero-based-cooking.png></a>
+</div>
+<div class=cryptoinfo>
+<div class=cryptotext>
+<img alt="" style="max-height:1em;max-width:1em;display:inline" src=/pix/btc.svg> Bitcoin <br>
+<code style="font-size:small;overflow-wrap:break-word;">bc1q763s4ud0hgfa66ce64gyh6tsss49vyk5cqcm6w</code><br>
+</div>
+<a href=/pix/bitcoin-based-cooking.png><img alt="Bitcoin QR Code" class=qr src=/pix/bitcoin-based-cooking.png></a>
+</div>
+</div>
+-->
+</article>
+</main>
+
+<footer>
+	<!-- Remove/Add footer information -->
+	<a href="vixinsfixins.github.io">Back to 🏠Home</a>
+</footer>
+</body>
+</html>

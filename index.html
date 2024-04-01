@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vixins Fixins</title>
+    <style>
+        /* Add your CSS styles here (if needed) */
+    body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #7FFFD4, #000000); /* Seafoam green to black gradient background */
+            background-size: cover; /* Stretch the background to cover the entire viewport */
+            background-attachment: fixed; /* Ensure the background remains fixed while scrolling */
+        }
+        #intro-section {
+            position: static; /* Position relative to the viewport */
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        #profile-section {
+            position: static; /* Position relative to the viewport */
+            text-align: center;
+        }
+        #intrograph-container {
+            background-color: #ffffff;
+            padding: 10px;
+            padding-right: 20px; /* Adding padding to the right side */
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adding shadow */
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .profile-image {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+        .linklist-container {
+            position: static; /* Position relative to the viewport */
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .linklist {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px;
+        }
+        .linklist li {
+            display: flex;
+            align-items: center;
+        }
+        .linklist img {
+            width: 150px;
+            height: 150px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <article id="intro-section">
+        <div id="top-banner"> <h2>VixinsFixins</h2> </div>
+        <div id="profile-section">
+            <img src="images/assets/Cook1.jpg" alt="Your Profile" class="profile-image">
+            <div id="intrograph-container">
+                <p id="intrograph">
+                    Hello! I'm Dara, a passionate person based in the Southeastern US. I love crafting food experiences for friends, family, and people. I'm inspired by any kind of cuisine and want to share that experience with as many people as possible, expanding my skills and sharing my knowledge with others. Welcome to my website!
+                </p>
+            </div>
+        </div>
+    </article>
+    <div class="linklist-container">
+        <h2>Useful Links</h2>
+        <ul class="linklist">
+            <li>
+                <img src="images/icons/videos.jpg" alt="Video Icon">
+                <a href="https://www.youtube.com/channel/UCIJEf9R3vJfx6rYPO-cMwPw">Videos</a>
+            </li>
+            <li>
+                <img src="images/icons/blog.jpg" alt="Blog Icon">
+                <a href="culinaryBlog/Blog/index.html">Blog</a>
+            </li>
+            <li>
+                <img src="images/icons/library.jpg" alt="Library Icon">
+                <a href="culinaryBlog/Recipes/index.html">Library</a>
+            </li>
+            <li>
+                <img src="images/icons/socmedia.jpg" alt="Social Media Icon">
+                <a href="#">Social Media</a>
+            </li>
+        </ul>
+    </div>
+<script>
+
+import { createClient } from '@supabase/supabase-js'
+
+const supabaseUrl = 'https://lxtznwnhjgodagzzdnfm.supabase.co'
+const supabaseKey = process.env.SUPABASE_KEY
+const supabase = createClient(supabaseUrl, supabaseKey)
+
+</script>
+
+</body>
+</html>
